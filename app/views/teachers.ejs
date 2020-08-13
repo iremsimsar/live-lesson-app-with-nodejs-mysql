@@ -1,0 +1,131 @@
+   <%- include homepartials/header.ejs   %>
+       
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area">
+        <!-- Breadcumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+                <li class="breadcrumb-item"><a href="/egitmenler">Eğitmenler</a></li>
+            </ol>
+        </nav>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Instructors Video Start ##### -->
+    <div class="instructors-video d-flex align-items-center justify-content-center bg-img" style="background-image: url(img/bg-img/bg4.jpg);">
+        <h2>Kendinizi Geliştirin.</h2>
+        <!-- video btn -->
+        <a href="https://www.youtube.com/watch?v=QvuWv5VTrHk" class="video-btn"><i class="fa fa-play" aria-hidden="true"></i></a>
+    </div>
+    <!-- ##### Instructors Video End ##### -->
+
+    <!-- ##### Best Tutors Area Start ##### -->
+     <section class="best-tutors-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>Alanında En İyi Hocalar</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="tutors-slide owl-carousel wow fadeInUp" data-wow-delay="250ms">
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img src="public/home/img/irem.jpeg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>İrem Simsar</h5>
+                                <span>Teacher</span>
+                                <p>Harran Üniversitesi Bilgisayar Mühendisliği Mezunu Nodejs Senior Developer</p>
+                                <div class="social-info">
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img style="height:100%"  src="public/home/img/cevher.jpeg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Ekrem KEL</h5>
+                                <span>Teacher</span>
+                                <p>Marmara Matematik Mezunu YGS-LYS Matematik Müfredatında Uzman</p>
+                                <div class="social-info">
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                       
+
+                        <!-- Single Tutors Slide -->
+                        <div class="single-tutors-slides">
+                            <!-- Tutor Thumbnail -->
+                            <div class="tutor-thumbnail">
+                                <img style="height:100%" src="public/home/img/esra.jpeg" alt="">
+                            </div>
+                            <!-- Tutor Information -->
+                            <div class="tutor-information text-center">
+                                <h5>Hamit SEYREK</h5>
+                                <span>Teacher</span>
+                                <p>Odtü Tarih Mezunu </p>
+                                <div class="social-info">
+                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ##### Top Teacher Area Start ##### -->
+    <section class="top-teacher-area section-padding-0-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h3>Her Alanda En İyi Öğretmenler</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <% teacher.forEach((teacher, index) => { %>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-instructor d-flex align-items-center mb-30">
+                        <div class="instructor-info">
+                        
+                            <h5><%= teacher.name %> <%= teacher.surname %></h5>
+                            <span>Teacher</span>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </section>
+
+   <%- include homepartials/footer.ejs   %>

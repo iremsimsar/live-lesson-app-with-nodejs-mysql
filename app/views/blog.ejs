@@ -1,0 +1,100 @@
+ <%- include homepartials/header.ejs   %>
+
+<section class="blog-area blog-page section-padding-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="blog-catagories mb-70 d-flex flex-wrap justify-content-between">
+
+                        <!-- Single Catagories -->
+                        <div class="single-catagories bg-img" style="background-image: url(public/home/img/bg-img/bc1.jpg);">
+                            <a href="#">
+                                <h6>Sanat &amp; Tarih</h6>
+                            </a>
+                        </div>
+
+                        <!-- Single Catagories -->
+                        <div class="single-catagories bg-img" style="background-image: url(public/home/img/bg-img/bc2.jpg);">
+                            <a href="#">
+                                <h6>Donanım</h6>
+                            </a>
+                        </div>
+
+                        <!-- Single Catagories -->
+                        <div class="single-catagories bg-img" style="background-image: url(public/home/img/bg-img/bc3.jpg);">
+                            <a href="#">
+                                <h6>Yazılım</h6>
+                            </a>
+                        </div>
+
+                        <!-- Single Catagories -->
+                        <div class="single-catagories bg-img" style="background-image: url(public/home/img/bg-img/türk.jpeg);">
+                            <a href="#">
+                                <h6>Yabancı Dil</h6>
+                            </a>
+                        </div>
+
+                        <!-- Single Catagories -->
+                        <div class="single-catagories bg-img" style="background-image: url(public/home/img/bg-img/bc5.jpg);">
+                            <a href="#">
+                                <h6>Programlama Dilleri</h6>
+                            </a>
+                        </div>
+
+                        <!-- Single Catagories -->
+                        <div class="single-catagories bg-img" style="background-image: url(public/home/img/bg-img/bc6.jpg);">
+                            <a href="#">
+                                <h6>Psikoloji</h6>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Blog Area -->
+                <% post.forEach((post, index) => { %>
+			   <% if (post.broadcasting=='Yayınlandı') { %>
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-area mb-100 wow fadeInUp" data-wow-delay="250ms">
+                      
+                        <% if (post.category=='Sanat Tarih') { %>
+                          <img src="public/home/img/blog-img/1.jpg" style="height:400px;"  alt="">
+                        <% } %>
+                        <% if (post.category=='Yazılım') { %>
+                            <img src="public/home/img/blog-img/2.jpg" style="height:400px;" alt="">
+                        <% } %>
+                        <% if (post.category=='Programlama Dilleri') { %>
+                                <img src="public/home/img/blog-img/3.jpg" style="height:400px;"  alt="">
+                        <% } %>
+                        <% if (post.category=='Psikoloji') { %>
+                            <img src="public/home/img/blog-img/4.jpg" style="height:400px;"  alt="">
+                        <% } %>
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="/post-<%= post.id %>" class="blog-headline">
+                                <h4> <%= post.title %></h4>
+                            </a>
+                            <div class="meta d-flex align-items-center">
+                                <a href="#"><%= post.author %></a>
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                                <a href="#"><%= post.category %></a>
+                            </div>
+                            <p><%= post.side_header %></p>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+			    <% }) %>
+
+
+            </div>
+            
+           
+        </div>
+    </section>
+
+    
+    
+    <%- include homepartials/footer.ejs   %>
+    <!-- ##### Blog Area End ##### -->

@@ -1,0 +1,86 @@
+<%- contentFor('HeaderCss') %>
+<!-- perticular page css -->
+  
+
+<%- contentFor('body') %>
+ 
+ <div class="content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Listeleme</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Admin</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Kullanıcılar</a></li>
+                                        <li class="breadcrumb-item active">Adminler</li>
+                                    </ol>
+            
+                                    <% include ../Partials/TinyCharts %>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
+                                <div class="col-12">
+                                    <!-- Left sidebar -->
+                                    <!-- End Left sidebar -->
+                                    <!-- Right Sidebar -->
+                                    <div class="email-rightbar" style="margin-left:0;">
+                                        
+                                        <div class="card">
+                                               
+                
+                                               
+                                            <ul class="message-list">
+                                            
+            <table class="table table-hovered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Number</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% user.forEach((user, index) => { %>
+                        <tr>
+                            <td><%= user.name %></td>
+                            <td><%= user.surname %></td>
+                            <td><%= user.email %></td>
+                            <td><%= user.phone %></td>
+                            <td><%= user.number %></td>
+                            <td>
+                               <form id="add-row-form" action="/admin-user-delete-<%= user.id %>" method="post">
+                           <button  type="submit" class="btn btn-danger">Delete</button>
+                          </form></td>
+                            
+                            </td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        
+
+                                             </ul>
+                                        </div> <!-- card -->
+            
+                                       
+            
+                                    </div> <!-- end Col-9 -->
+            
+                                </div>
+                            </div><!-- End row -->
+            
+
+
+
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+                <%- contentFor('FooterJs') %>

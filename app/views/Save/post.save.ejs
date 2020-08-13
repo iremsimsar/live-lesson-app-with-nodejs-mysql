@@ -1,0 +1,72 @@
+<%- contentFor('HeaderCss') %>
+<!-- perticular page css -->
+  
+
+<%- contentFor('body') %>
+<div class="content">
+  <div class="container-fluid">
+     <div class="card">
+      <div class="card-header card-header-primary">
+      <h2>Blog Kayıt</h2> 
+      </div>
+    <div class="card-body">
+              <div id="typography">
+                <div class="card-title">
+                </div>
+              </div
+    </div>
+        <form action="admin-post-save" method="POST" class="u-space_top-md">
+          <div class="form-bundle" style=" margin-top:30px" >
+            <label for="name" style="font-size:28px;">Header 1</label>
+            <input type="text" id="name" style="width:100%;font-size:28px;" name="title">
+          </div>
+          <div class="form-bundle"  style=" margin-top:30px" >
+            <label for="age" style="font-size:20px;">Header 2</label>
+            <input type="text" id="name" style="width:100%;font-size:20px;" name="side_header">
+          </div>
+          
+           <div class="form-bundle" style="font-size:14px; margin-top:30px"  >
+            <label for="age" style="font-size:14px;">Author</label>
+            <select class="form-control" name="author" style="font-size:14px;">
+            <label for="age" style="font-size:14px;"></label>
+            <option style="font-size:14px;">İrem SİMSAR</option>
+            </select>
+          </div>
+
+          <div class="form-bundle" style=" margin-top:30px"  >
+         <label for="age" style="font-size:14px;">Category</label>
+          <select class="form-control" name="category" style="font-size:14px;">
+            <label for="age" style="font-size:14px;"></label>
+          <option>Sanat Tarih</option>
+          <option>Yazılım</option>
+          <option>Programlama Dilleri</option>
+          <option>Psikoloji</option>
+        </select>
+          </div>
+
+           <div class="form-bundle" style=" margin-top:30px" >
+         <label for="age" style="font-size:14px;">BroadCast</label>
+          <select class="form-control" name="broadcasting" style="font-size:14px;">
+            <label for="age" style="font-size:14px;"></label>
+          <option>Yayınlandı</option>
+          <option>Taslak</option>
+        </select>
+          </div>
+
+          <div class="form-bundle" style="height:600px; margin-top:30px">
+            <label for="suggestion"  style="font-size:16px;">Paragraph</label>
+            <textarea name="explain" style="height:500px; font-size:16px; width: 100%; " id="suggestion"> </textarea>
+          </div>
+          <div class="button-items">
+            <button type="submit" class="btn btn-success waves-effect waves-light">Success</button>
+          </div>
+         
+  </form>
+        
+
+      
+
+  </div>
+ </div>
+
+<%- contentFor('FooterJs') %>

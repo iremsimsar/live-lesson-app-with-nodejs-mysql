@@ -1,0 +1,115 @@
+   <%- include homepartials/header.ejs   %>
+                 
+   
+   <div class="breadcumb-area">
+        <!-- Breadcumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+                <li class="breadcrumb-item"><a href="Kurslar">Kurslar</a></li>
+            </ol>
+        </nav>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Catagory ##### -->
+    <div class="clever-catagory bg-img d-flex align-items-center justify-content-center p-3" style="background-image: url(public/home/img/kurs.jpeg);">
+        <h3>Kurslar &amp; Paketler</h3>
+    </div>
+
+    <!-- ##### Popular Course Area Start ##### -->
+    <section class="popular-courses-area section-padding-100">
+        <div class="container">
+            <div class="row">
+                <!-- Single Popular Course -->
+                <% if (course.length > 0) { %>
+                <% course.forEach((course, index) => { %>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
+
+                     <% if (course.category=='Matematik') { %>
+                        <img src="public/home/img/matematik.jpeg" alt="">
+                    <% }  %>
+
+                    <% if (course.category=='Fizik') { %>
+                        <img src="public/home/img/fizik.jpeg" alt="">
+                    <% }  %>
+
+                    <% if (course.category=='Kimya') { %>
+                        <img src="public/home/img/kimya.jpeg" alt="">
+                    <% } %>
+
+                    <% if (course.category=='Biyoloji') { %>
+                        <img src="public/home/img/biyoloji.jpeg" alt="">
+                    <% }  %>
+
+
+                    <% if (course.category=='Türkçe') { %>
+                        <img src="public/home/img/turkçe.jpeg" alt="">
+                    <% }  %>
+
+                     <% if (course.category=='İngilizce') { %>
+                        <img src="public/home/img/ingilizce.jpeg" alt="">
+                    <% }  %>
+
+                     <% if (course.category=='Yapay Zeka') { %>
+                        <img src="public/home/img/yapay_zeka.jpeg" alt="">
+                    <% }  %>
+
+                    <% if (course.category=='Bilgisayar') { %>
+                        <img src="public/home/img/bilgisayar.jpeg" alt="">
+                    <% }  %>
+
+                       <!-- Course Content -->
+                        <div class="course-content">
+
+
+                            <h4><%= course.name %></h4>
+                            
+                            <div class="meta d-flex align-items-center">
+
+                                <a href="#"><%= course.teacher %></a>
+
+                                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+
+                                <a href="#"></a>
+
+                            </div>
+                        </div>
+                        <!-- Seat Rating Fee -->
+                        <div class="seat-rating-fee d-flex justify-content-between">
+                            <div class="seat-rating h-100 d-flex align-items-center">
+                                <div class="seat">
+                                    <i class="fa fa-user" aria-hidden="true"></i> 10
+                                </div>
+                                <div class="rating">
+                                    <i class="fa fa-star" aria-hidden="true"></i> 4.5
+                                </div>
+                            </div>
+                            <div class="course-fee h-100">
+                                <a href="/Kurslar-<%= course.id %>" class="free"><%= course.price %>$</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>
+                <% } else { %>
+            <p class="text-center">No course found. Go <a href="/admin" >here</a> to add players.</p>
+        <% } %>
+
+
+         
+           
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="load-more text-center wow fadeInUp" data-wow-delay="1000ms">
+                        <a href="#" class="btn clever-btn btn-2">Load More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include homepartials/footer.ejs   %>

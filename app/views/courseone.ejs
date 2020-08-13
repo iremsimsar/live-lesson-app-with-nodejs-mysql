@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>AYZASOFT &amp; Yazılım Donanım | Home</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="public/home/img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link href="public/home/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="public/home/css/animate.css" rel="stylesheet" type="text/css">
+    <link href="public/home/css/classy-nav.min.css" rel="stylesheet" type="text/css">
+    <link href="public/home/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="public/home/css/magnific-popup.css" rel="stylesheet" type="text/css">
+    <link href="public/home/css/owl.carousel.min.css" rel="stylesheet" type="text/css">
+    <link href="public/style.css" rel="stylesheet" type="text/css">
+    <link href="public/style.css.map" rel="stylesheet" type="text/css">
+
+    <link href="public/home/scss/_fonts.scss" rel="stylesheet" type="text/scss">
+    <link href="public/home/scss/_mixin.scss" rel="stylesheet" type="text/scss">
+    <link href="public/home/scss/_responsive.scss" rel="stylesheet" type="text/scss">
+    <link href="public/home/scss/_theme_color.scss" rel="stylesheet" type="text/scss">
+    <link rel="stylesheet" href="public/home/scss/style.scss">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+     <!-- ##### Header Area Start ##### -->
+       <header class="header-area"> 
+        <!-- Navbar Area -->
+        <div class="clever-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="cleverNav">
+
+                    <!-- Logo -->
+                    
+                    <a class="nav-brand" href="index.html"><img src="public/assets/images/logo.png" style="with:20px;height:40px" alt=""></a>
+
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a href="/">Anasayfa</a></li>
+                                <li><a href="/Kurslar">Kurslar</a></li>
+                                <li><a href="/egitmenler">Eğitmenler</a></li>
+                                <li><a href="/Blog">Blog</a></li>
+                                <li><a href="/iletisim">İletişim</a></li>
+                            </ul>
+
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Register / Login -->
+                            <div class="register-login-area">
+                                <a href="/admin" class="btn active">Login</a>
+                            </div>
+
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area">
+        <!-- Breadcumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item"><a href="/Kurslar">Kurslar</a></li>
+                <li class="breadcrumb-item"><a href="/Kurslar-<%=course.id%>"><%= course.name %></a></li>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-popular-course mb-100 wow fadeInUp" data-wow-delay="250ms">
+
+            </ol>
+        </nav>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Single Course Intro Start ##### -->
+    <div class="single-course-intro d-flex align-items-center justify-content-center" style="background-image: url(public/assets/images/resim.jpeg);">
+        <!-- Content -->
+        <div class="single-course-intro-content text-center">
+            <!-- Ratings -->
+            <div class="ratings">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <h3> 
+                 <%= course.name %>
+            </h3>
+            <div class="meta d-flex align-items-center justify-content-center">
+                <a href="#"><%= course.category %></a>
+            </div>
+            <div class="meta d-flex align-items-center justify-content-center">
+                <a href="#"><%= course.teacher %></a>
+            </div>
+            <div class="price"><%= course.price %> $</div>
+        </div>
+    </div>
+    <!-- ##### Single Course Intro End ##### -->
+
+    <!-- ##### Courses Content Start ##### -->
+    <div class="single-course-content section-padding-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <div class="course--content">
+
+                        <div class="clever-tabs-content">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="tab--1" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false">Description</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tab--2" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="true">Curriculum</a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content" id="myTabContent">
+                                <!-- Tab Text -->
+                                <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab--1">
+                                    <div class="clever-description">
+
+                                        <!-- About Course -->
+                                        <div class="about-course mb-30">
+                                            <h4>Bu Kurs Hakkında</h4>
+                                            <p><%= course.explain %></p>
+                                        </div>
+
+                                        <!-- All Instructors -->
+                                        <div class="all-instructors mb-30">
+                                            <h4>Tüm Eğitmenler</h4>
+
+                                            <div class="row">
+                                                <!-- Single Instructor -->
+                                                <div class="col-lg-6">
+                                                    <div class="single-instructor d-flex align-items-center mb-30">
+                                                        <div class="instructor-thumb">
+                                                            <img src="img/bg-img/t1.png" alt="">
+                                                        </div>
+                                                        <div class="instructor-info">
+                                                            <h5><p><%= course.teacher %></p></h5>
+                                                            <span>Öğretmen</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Single Instructor -->
+                                                <div class="col-lg-6">
+                                                    <div class="single-instructor d-flex align-items-center mb-30">
+                                                        <div class="instructor-thumb">
+                                                            <img src="img/bg-img/t2.png" alt="">
+                                                        </div>
+                                                        <div class="instructor-info">
+                                                            <h5><p><%= course.assistantteacher %></p></h5>
+                                                            <span>Asistan</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                               
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ -->
+                                        <div class="clever-faqs">
+                                            <h4>Sık Sorulan Sorular</h4>
+
+                                            <div class="accordions" id="accordion" role="tablist" aria-multiselectable="true">
+
+                                                <!-- Single Accordian Area -->
+                                                <div class="panel single-accordion">
+                                                    <h6><a role="button" class="" aria-expanded="true" aria-controls="collapseOne" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Kursun Geri Ödeme Politikası Nedir?
+                                                    <span class="accor-open"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                                                    <span class="accor-close"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                                                    </a></h6>
+                                                    <div id="collapseOne" class="accordion-content collapse show">
+                                                        <p><p><%= course.reply %></p></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab Text -->
+                                <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab--2">
+                                    <div class="clever-curriculum">
+
+                                        <!-- About Curriculum -->
+                                        <div class="about-curriculum mb-30">
+                                            <h4>Syllabus</h4>
+                                            <p>Sed elementum lacus a risus luctus suscipit. Aenean sollicitudin sapien neque, in fermentum lorem dignissim a. Nullam eu mattis quam. Donec porttitor nunc a diam molestie blandit. Maecenas quis ultrices ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eget vehicula lorem, vitae porta nisi. Ut vel quam erat. Ut vitae erat tincidunt, tristique mi ac, pharetra dolor. In et suscipit ex. Pellentesque aliquet velit tortor, eget placerat mi scelerisque a. Aliquam eu dui efficitur purus posuere viverra. Proin ut elit mollis, euismod diam et, fermentum enim.</p>
+                                        </div>
+
+                                        <!-- Curriculum Level -->
+                                        <div class="curriculum-level mb-30">
+                                            <h4 class="d-flex justify-content-between"><span>Week 1</span> <span>0/4</span></h4>
+                                            <h5>Beginners Level</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla.</p>
+
+                                            <ul class="curriculum-list">
+                                                <li><i class="fa fa-file" aria-hidden="true"></i> 1 video, 1 audio, 1 reading
+                                                    <ul>
+                                                        <li>
+                                                            <span><i class="fa fa-video-camera" aria-hidden="true"></i> Video: <span>Greetings and Introductions</span></span>
+                                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 15 minutes</span>
+                                                        </li>
+                                                        <li>
+                                                            <span><i class="fa fa-file-text" aria-hidden="true"></i> Reading: <span>Word Types</span></span>
+                                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 15 minutes</span>
+                                                        </li>
+                                                        <li>
+                                                            <span><i class="fa fa-volume-down" aria-hidden="true"></i> Audio: <span>Listening Exercise</span></span>
+                                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 15 minutes</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Graded: Cumulative Language Quiz</span>
+                                                    <span>3 Questions</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Curriculum Level -->
+                                        <div class="curriculum-level mb-30">
+                                            <h4 class="d-flex justify-content-between"><span>Week 2</span> <span>0/5</span></h4>
+                                            <h5>Intermediate Level</h5>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla.</p>
+
+                                            <ul class="curriculum-list">
+                                                <li><i class="fa fa-file" aria-hidden="true"></i> 1 video, 1 audio, 1 reading
+                                                    <ul>
+                                                        <li>
+                                                            <span><i class="fa fa-video-camera" aria-hidden="true"></i> Video: <span>Greetings and Introductions</span></span>
+                                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 15 minutes</span>
+                                                        </li>
+                                                        <li>
+                                                            <span><i class="fa fa-file-text" aria-hidden="true"></i> Reading: <span>Word Types</span></span>
+                                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 15 minutes</span>
+                                                        </li>
+                                                        <li>
+                                                            <span><i class="fa fa-volume-down" aria-hidden="true"></i> Audio: <span>Listening Exercise</span></span>
+                                                            <span><i class="fa fa-clock-o" aria-hidden="true"></i> 15 minutes</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="d-flex justify-content-between">
+                                                    <span><i class="fa fa-graduation-cap" aria-hidden="true"></i> Graded: Cumulative Language Quiz</span>
+                                                    <span>3 Questions</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <div class="course-sidebar">
+                        <!-- Buy Course -->
+                        <a href="#" class="btn clever-btn mb-30 w-100">Buy course</a>
+
+                        <!-- Widget -->
+                        <div class="sidebar-widget">
+                            <h4>Kurs Özellikleri</h4>
+                            <ul class="features-list">
+                                <li>
+                                    <h6><i class="fa fa-clock-o" aria-hidden="true"></i> Süre</h6>
+                                    <h6><%= course.time %> saat</h6>
+                                </li>
+                                <li>
+                                    <h6><i class="fa fa-bell" aria-hidden="true"></i> Dersler </h6>
+                                    <h6><%= course.lesson %> ders</h6>
+                                </li>
+                                <li>
+                                    <h6><i class="fa fa-thumbs-down" aria-hidden="true"></i>Fiyat</h6>
+                                    <h6><%= course.price %> $</h6>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Widget -->
+                        <div class="sidebar-widget">
+                            <h4>Sertifika</h4>
+                            <img src="/public/home/img/bg-img/cer.png" alt="">
+                        </div>
+
+                        <!-- Widget -->
+                        <div class="sidebar-widget">
+                            <h4>İndirim Kuponu</h4>
+
+                            <!-- Single Courses -->
+                            <div class="single--courses d-flex align-items-center">
+                                <div class="thumb">
+                                    <img src="/public/home/img/bg-img/yml.jpg" alt="">
+                                </div>
+                                <div class="content">
+                                    <h6><%= course.cuppon %></h6>
+                                </div>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area">
+        <!-- Top Footer Area -->
+        <div class="top-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="img/core-img/logo2.png" alt=""></a>
+                        </div>
+                        <!-- Copywrite -->
+                        <p><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">İrem SİMSAR</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area d-flex justify-content-between align-items-center">
+            <!-- Follow Us -->
+            <div class="follow-us">
+                <span>Follow us</span>
+                <a href="https://www.facebook.com/iremsimsar"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/iremsimsarr/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/iremsmsr"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/iremsimsar/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 public/home/js -->
+    <script src="public/home/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper public/home/js -->
+    <script src="public/home/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap public/home/js -->
+    <script src="public/home/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins public/home/js -->
+    <script src="public/home/js/plugins/plugins.js"></script>
+    <!-- Active public/home/js -->
+    <script src="public/home/js/active.js"></script>
+       <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwuyLRa1uKNtbgx6xAJVmWy-zADgegA2s"></script>
+    <script src="public/home/js/google-map/map-active.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+ <%- include homepartials/header.ejs   %>
+
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb-area">
+        <!-- Breadcumb -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Anasayfa</a></li>
+                <li class="breadcrumb-item"><a href="#">Kurslar</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><%= post.title %></li>
+            </ol>
+        </nav>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Catagory Area Start ##### -->
+    <div class="clever-catagory blog-details bg-img d-flex align-items-center justify-content-center p-3 height-400" style="background-image: url(public/home/img/blog-img/4.jpg);">
+        <div class="blog-details-headline">
+            <h3><%= post.title %></h3>
+            <div class="meta d-flex align-items-center justify-content-center">
+                <a href="#"><%= post.author %></a>
+                <span><i class="fa fa-circle" aria-hidden="true"></i></span>
+                <a href="#"><%= post.category %></a>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Catagory Area End ##### -->
+
+    <!-- ##### Blog Details Content ##### -->
+    <div class="blog-details-content section-padding-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <!-- Blog Details Text -->
+                    <div class="blog-details-text">
+                      <h5 class="text-center py-4"><%= post.side_header %></h5>
+                        <p><%= post.explain %></p>
+
+                        <div class="post-tags">
+                            <ul>
+                                <li><a href="#">yazılım</a></li>
+                                <li><a href="#">donanım</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Post A Comment -->
+                <div class="col-12 col-lg-6">
+                    <div class="post-a-comments mb-70 mt-50">
+                        <h4>Yorum Yap</h4>
+
+                        <form action="/iletisim" method="post">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="name" id="text" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" name="email"  id="email" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="form-control" name="message"  id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn clever-btn w-100">Gönder</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- ##### Blog Details Content ##### -->
+    
+    
+    <%- include homepartials/footer.ejs   %>
+    <!-- ##### Blog Area End ##### -->

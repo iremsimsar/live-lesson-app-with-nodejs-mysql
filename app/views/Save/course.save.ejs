@@ -1,0 +1,124 @@
+<%- contentFor('HeaderCss') %>
+<!-- perticular page css -->
+  
+
+<%- contentFor('body') %>
+<div class="content">
+                    <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Kayıt</h4>
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Admin</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Dersler</a></li>
+    
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Kurs Kayıt</a></li>
+                                    </ol>
+                                    
+            
+                               <% include ../Partials/TinyCharts %>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card m-b-20">
+                                <form action="admin-course-save" method="POST">
+                                    
+                                    <div class="card-body">
+      
+                                        <h4 class="mt-0 header-title">Kurs Kaydı</h4>
+                                        
+                                        <div class="form-group row">
+                                            <label for="example-text-input" class="col-sm-2 col-form-label">Name</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" name="name" placeholder="Matematik" id="example-text-input">
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label for="example-search-input" class="col-sm-2 col-form-label">Category</label>
+                                            
+                                            <div class="form-group col-md-6">
+                                                <select id="position" name="category" class="form-control" required>
+                                                    <option selected disabled>Choose Category</option>
+                                                    <option>Matematik</option>
+                                                    <option>Fizik</option>
+                                                    <option>Kimya</option>
+                                                    <option>Biyoloji</option>
+                                                    <option>Bilgisayar</option>
+                                                    <option>Türkçe</option>
+                                                    <option>Yapay Zeka</option>
+                                                    <option>İngilizce</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-search-input" class="col-sm-2 col-form-label">Price</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="search" name="price" placeholder="50" id="example-search-input">
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label for="example-search-input" class="col-sm-2 col-form-label">Time</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="search" name="time"  id="example-search-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-email-input" class="col-sm-2 col-form-label">Author</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" name="author" placeholder="İrem Simsar" id="example-email-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-url-input" class="col-sm-2 col-form-label">Teacher</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" name="teacher" id="example-url-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="example-url-input" class="col-sm-2 col-form-label">Assistant Teacher</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" name="assistantteacher" id="example-url-input">
+                                            </div>
+                                        </div>
+                                         <div class="form-group row">
+                                            <label for="example-url-input" class="col-sm-2 col-form-label">Lesson</label>
+                                            <div class="col-sm-10">
+                                                <input class="form-control" type="text" name="lesson" id="example-url-input">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row" style="height:200px">
+                                            <label for="example-url-input" class="col-sm-2 col-form-label">Explain</label>
+                                            <div class="col-sm-10"style="height:200px">
+                                                <textarea style="height:200px" class="form-control" type="text" name="explain" id="example-url-input"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <h6><center>Lütfen Aşağıdaki Soruları Cevaplayınız</center></h6>
+                                         <div class="form-group row">
+                                            <label for="example-url-input" class="col-sm-2 col-form-label">Cevap 1</label>
+                                            <div class="col-sm-10">
+                                                <input  class="form-control" type="text" placeholder="Geri Ödeme Politikası Nedir?" name="reply" id="example-url-input">
+                                            </div>
+                                        </div>
+
+                                </form>
+                                <div class="button-items">
+                                            <button type="submit" class="btn btn-success waves-effect waves-light">Success</button>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+        
+
+                    </div> <!-- container-fluid -->
+
+                </div> <!-- content -->
+
+
+<%- contentFor('FooterJs') %>

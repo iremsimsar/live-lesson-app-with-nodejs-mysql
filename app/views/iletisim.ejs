@@ -1,0 +1,71 @@
+   <%- include homepartials/header.ejs   %>
+                 
+   
+  
+    <!-- ##### Google Maps ##### -->
+    <div class="map-area">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.4493152993787!2d28.981552054044236!3d41.072911663791075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x53dff21468cc08e3!2s%C4%B0stanbul%20Ticaret%20Merkezi!5e0!3m2!1str!2str!4v1595844452174!5m2!1str!2str" frameborder="0" style="border:0; width:100%; height:400px" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+    <!-- ##### Contact Area Start ##### -->
+    <section class="contact-area">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Info -->
+                <div class="col-12 col-lg-6">
+                    <div class="contact--info mt-50 mb-100">
+                        <h4>Bizimle İletişime Geçin</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <h6><i class="fa fa-clock-o" aria-hidden="true"></i> Çalışma Saatleri</h6>
+                                <h6>9:00 AM - 18:00 PM</h6>
+                            </li>
+                            <li>
+                                <h6><i class="fa fa-phone" aria-hidden="true"></i> Number</h6>
+                                <h6>+90(553) 448-2171</h6>
+                            </li>
+                            <li>
+                                <h6><i class="fa fa-envelope" aria-hidden="true"></i> Email</h6>
+                                <h6> info@ayzasoft.com</h6>
+                            </li>
+                            <li>
+                                <h6><i class="fa fa-map-pin" aria-hidden="true"></i></h6>
+                                <h6>Hürriyet mahallesi, Vatan caddesi, İstanbul Ticaret Merkezi, No: 4/1, Kat: 3, Daire: 13 Kağıthane/İstanbul</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-12 col-lg-6">
+                    <div class="contact-form">
+                        <h4>İletişim Formu</h4>
+                        
+                        <form action="iletisim" method="post">
+                            <div class="row">
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="text" placeholder="Name" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Email"  name="email">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" id="message" cols="30" rows="10" placeholder="Message"  name="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn clever-btn w-100">Mesaj Gönder</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  
+    <%- include homepartials/footer.ejs   %>
