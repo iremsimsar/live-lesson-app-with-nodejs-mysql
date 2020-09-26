@@ -1,45 +1,43 @@
             
-            <%- contentFor('HeaderCss') %>
-            <!-- perticular page css -->
-              <!-- Full Calendar -->
-              <link href="public/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet">
-            <%- contentFor('body') %>
-            <div class="content">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="page-title-box">
-                                    <h4 class="page-title">Calender</h4>
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Lexa</a></li>
-                                        <li class="breadcrumb-item active">Calendar</li>
-                                    </ol>
-                                    <% include ../Partials/TinyCharts %>
-                                </div>
-                            </div>  
-                        </div>
-                        <!-- end row -->
+<%- contentFor('HeaderCss') %>
+<!-- perticular page css -->
+<!-- Full Calendar -->
+<link href="public/plugins/fullcalendar/css/fullcalendar.min.css" rel="stylesheet">
+<%- contentFor('body') %>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <h4 class="page-title">Takvim</h4>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0);">Lexa</a></li>
+                        <li class="breadcrumb-item active">Calendar</li>
+                    </ol>
+                </div>
+            </div>  
+        </div>
+        <!-- end row -->
 
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="card m-b-30">
-                                    <div class="card-body">
-                                        <div id='calendar'></div>
-                                        <div style='clear:both'></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- container-fluid -->
-                </div> <!-- content -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card m-b-30">
+                    <div class="card-body">
+                        <div id='calendar'></div>
+                        <div style='clear:both'></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- container-fluid -->
+</div> <!-- content -->
 
-                <%- contentFor('FooterJs') %>
-                <!--Full calendar-->
-            <script src="public/plugins/jquery-ui/jquery-ui.min.js"></script>
-            <script src="public/plugins/moment/moment.js"></script>
-            <script src="public/plugins/fullcalendar/js/fullcalendar.min.js"></script>
-            <script src="public/assets/pages/calendar-init.js"></script>
+<%- contentFor('FooterJs') %>
+<!--Full calendar-->
+<script src="public/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="public/plugins/moment/moment.js"></script>
+<script src="public/plugins/fullcalendar/js/fullcalendar.min.js"></script>
+<script src="public/assets/pages/calendar-init.js"></script>
 
-          
-          
-          
+
+

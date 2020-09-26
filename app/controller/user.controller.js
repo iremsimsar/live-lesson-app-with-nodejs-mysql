@@ -9,7 +9,8 @@ const Role = db.role;
 var jwt = require('jsonwebtoken');
 var bcrypt = require('bcryptjs');
 const { response } = require('express');
-
+const swal = require('sweetalert')
+ 
  exports.signin = (request, response) => {
 	console.log("Giriş Yapılıyor...");
 	Admin.findOne({
@@ -23,7 +24,7 @@ const { response } = require('express');
 		}
 		var passwordIsValid = bcrypt.compareSync(request.body.password, user.password);
 		if (!passwordIsValid) {
-			return response.send({ auth: false, accessToken: null, reason: "Invalid Password!" });
+            throw 'Hata Oluştu'
 		}
 		response.redirect('/admin-home');
 	}).catch(err => {

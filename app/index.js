@@ -30,16 +30,14 @@ app.get('/layouts/', function(req, res) {
 });
 
 
-// Add Authentication Route file with app
 app.use('/', Authrouter); 
 
-//For set layouts of html view
+
 var expressLayouts = require('express-ejs-layouts');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
-// Add Route file with app
 
 app.use('/', admin_router); 
 

@@ -8,8 +8,6 @@ const { response } = require('express');
 
 
 exports.courseCreate = (req, res) => {
-    // Veritabanına kullanıcı kaydı
-    console.log("Kayıt işlemi yapılıyor");
         Course.create({
             name: req.body.name,
             time: req.body.time,

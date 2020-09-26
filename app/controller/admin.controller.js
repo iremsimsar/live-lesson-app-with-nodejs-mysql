@@ -3,8 +3,7 @@ const Admin = db.admin;
 var bcrypt = require('bcryptjs');
 
  exports.signin = (request, response) => {
-	console.log("Giriş Yapılıyor...");
-	Admin.findOne({
+	return Admin.findOne({
 		where: {
 			username: request.body.username
 		}
@@ -25,8 +24,7 @@ var bcrypt = require('bcryptjs');
 
 exports.adminsignup = (req, res) => {
     // Veritabanına kullanıcı kaydı
-    console.log("Kayıt işlemi yapılıyor");
-        Admin.create({
+        return Admin.create({
             name: req.body.name,
             surname: req.body.surname,
             username: req.body.username,
@@ -44,8 +42,7 @@ exports.adminsignup = (req, res) => {
     
 
 exports.checkDuplicateAdminNameOrEmail = (req, res, next) => {
-    // -> Kullanıcı adının var olup olmadığını kontrol et
-    Admin.findOne({
+    return Admin.findOne({
         where: {
             name: req.body.name,
             surname: req.body.surname,
@@ -56,7 +53,6 @@ exports.checkDuplicateAdminNameOrEmail = (req, res, next) => {
             res.status(400).send("Hata -> Bu kullanıcı adı kullanılmakta!");
             return;
         }
-        // -> Mailin var olup olmadığını kontrol et
         Admin.findOne({
             where: {
                 email: req.body.email
@@ -76,7 +72,7 @@ exports.checkDuplicateAdminNameOrEmail = (req, res, next) => {
 exports.adminList = (req, res ,result ) => {
     let  array;
    
-	Admin.findAll().then((user)=>{
+	return Admin.findAll().then((user)=>{
         res.render('List/admin.list.ejs', {
             Admin: result,
             user:user,   
@@ -86,7 +82,7 @@ exports.adminList = (req, res ,result ) => {
 
 
 exports.adminDelete = function (req, res) {
-	Admin.destroy({
+	return Admin.destroy({
 		where: { id: req.params.id }
 	}).then(admin =>
 		res.render('Dashboard/dashboard.ejs')
